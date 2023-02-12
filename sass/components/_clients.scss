@@ -1,0 +1,40 @@
+/**
+    |============================
+    | Clients
+    |============================
+  */
+.company-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-list > .company-item {
+  width: 170px;
+  height: 92px;
+}
+
+.company-item > .company-link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-gray-color);
+  border: 1px solid var(--secondary-gray-color);
+  border-radius: 4px;
+  transition: border-color var(--transition-duration)
+      cubic-bezier(var(--transition-time-func)),
+    color var(--transition-duration) cubic-bezier(var(--transition-time-func));
+
+  &:hover,
+  &:focus {
+    border-color: var(--primary-accent-color);
+    color: var(--primary-accent-color);
+    outline: none;
+  }
+}
+
+.company-link > .company-icon {
+  fill: currentColor;
+}

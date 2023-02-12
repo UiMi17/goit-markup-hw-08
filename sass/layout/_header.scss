@@ -1,0 +1,114 @@
+/**
+    |============================
+    | Header
+    |============================
+  */
+header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-right: 93px;
+  color: var(--primary-accent-color);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.logo-item {
+  color: var(--primary-color);
+}
+
+/* Navigation */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.nav-item + .nav-item {
+  margin-left: 50px;
+}
+
+.nav-item > .nav-link {
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 31px;
+  color: var(--primary-color);
+  transition: color var(--transition-duration)
+    cubic-bezier(var(--transition-time-func));
+
+  &.current::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--primary-accent-color);
+    border-radius: 2px;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--primary-accent-color);
+  }
+}
+
+.nav-link > .link-studio-text {
+  color: var(--primary-accent-color);
+}
+
+.nav-link > .link-portfolio-text {
+  color: var(--primary-accent-color);
+}
+
+/* Header contacts */
+.contacts-list {
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.contacts-list .contacts-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 32px;
+  padding-bottom: 31px;
+  color: var(--secondary-color);
+  fill: currentColor;
+  transition: color var(--transition-duration)
+      cubic-bezier(var(--transition-time-func)),
+    fill var(--transition-duration) cubic-bezier(var(--transition-time-func));
+
+  &:hover,
+  &:focus {
+    color: var(--primary-accent-color);
+    fill: currentColor;
+  }
+}
+
+.contacts-item + .contacts-item {
+  margin-left: 30px;
+}
