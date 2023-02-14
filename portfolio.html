@@ -25,37 +25,40 @@
     <!-- Header -->
     <header>
       <div class="container header-container">
-        <!-- Navigation -->
+        <a href="./index.html" class="header-logo link"
+          >Web<span class="logo-item">Studio</span></a
+        >
+        <button class="modal-menu__open-btn js-open-menu" type="button">
+          <svg class="" width="24" height="16">
+            <use href="./images/icons.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
         <nav class="main-nav">
-          <a href="./index.html" class="header-logo link"
-            >Web<span class="logo-item">Studio</span></a
-          >
           <ul class="nav-list list">
             <li class="nav-item">
-              <a href="./index.html" class="nav-link link">Студія</a>
+              <a href="./index.html" class="nav-link current link"
+                ><span class="link-studio-text">Студія</span></a
+              >
             </li>
             <li class="nav-item">
-              <a href="./portfolio.html" class="nav-link current link"
-                ><span class="link-studio-text">Портфоліо</span></a
-              >
+              <a href="./portfolio.html" class="nav-link link">Портфоліо</a>
             </li>
             <li class="nav-item">
               <a href="" class="nav-link link">Контакти</a>
             </li>
           </ul>
         </nav>
-        <!-- Header contacts list -->
         <ul class="contacts-list list">
           <li class="contacts-item">
-            <a href="mailto:info@devstudio.com" class="contacts-link mail link"
-              ><svg class="mail" width="16" height="12">
+            <a href="mailto:info@devstudio.com" class="contacts-link"
+              ><svg class="mail">
                 <use href="./images/icons.svg#icon-mail"></use></svg
               >info@devstudio.com</a
             >
           </li>
           <li class="contacts-item">
-            <a href="tel:+380961111111" class="contacts-link tel link"
-              ><svg class="tel" width="10" height="16">
+            <a href="tel:+380961111111" class="contacts-link"
+              ><svg class="tel">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -332,7 +335,6 @@
           <a href="./index.html" class="footer-logo link"
             >Web<span class="logo-item">Studio</span></a
           >
-          <!-- Address of the company -->
           <address class="footer-address">
             <a href="https://www.google.com/maps" class="address-link link"
               >м. Київ, пр-т Лесі Українки, 26</a
@@ -397,7 +399,6 @@
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
               </a>
-              <!-- </li>  Aria label was here :0 -->
             </li>
           </ul>
         </div>
