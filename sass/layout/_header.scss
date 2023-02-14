@@ -14,15 +14,31 @@ header {
 }
 
 .header-logo {
+  // Phone/Tabelt screen
   display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  margin-right: 93px;
-  color: var(--primary-accent-color);
+  padding-top: 16px;
+  padding-bottom: 16px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  color: var(--primary-accent-color);
+
+  // Tabelt screen
+  @media screen and (min-width: 768px) {
+    margin-right: 87px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  // Desktop screen
+  @media screen and (min-width: 1200px) {
+    margin-right: 92px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logo-item {
@@ -31,12 +47,19 @@ header {
 
 /* Navigation */
 .main-nav {
+  // Desktop screen
   display: flex;
   align-items: center;
+
+  // Phone screen
+  @media screen and (max-width: 767.98px) {
+    display: none;
+  }
 }
 
 .nav-list {
   display: flex;
+  margin-right: 96px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -83,14 +106,41 @@ header {
 
 /* Header contacts */
 .contacts-list {
+  // Desktop screen
   display: flex;
+  margin-left: auto;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  // Tabelt screen
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: auto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+
+  // Phone screen
+  @media screen and (max-width: 767.98px) {
+    display: none;
+  }
+}
+
+.contacts-item + .contacts-item {
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
+  }
 }
 
 .contacts-list .contacts-link {
+  // Desktop screen
   display: flex;
   align-items: center;
   gap: 10px;
@@ -107,8 +157,39 @@ header {
     color: var(--primary-accent-color);
     fill: currentColor;
   }
+
+  // Tabelt screen
+  @media screen and (min-width: 768px) {
+    display: flex;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    color: var(--secondary-color);
+  }
 }
 
-.contacts-item + .contacts-item {
-  margin-left: 30px;
+.mail {
+  // Desktop screen
+  width: 16px;
+  height: 12px;
+
+  // Tablet screen
+  @media screen and (min-width: 768px) {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+.tel {
+  // Desktop screen
+  width: 10px;
+  height: 16px;
+
+  // Tablet screen
+  @media screen and (min-width: 768px) {
+    width: 10px;
+    height: 14px;
+  }
 }

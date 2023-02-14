@@ -1,0 +1,105 @@
+.modal-menu__open-btn {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  width: 40px;
+  height: 40px;
+}
+
+.mobile-menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px 48px 40px;
+  background-color: var(--primary-white-color);
+  transform: translateX(100%);
+  transition: transform var(--transition-duration)
+    cubic-bezier(var(--transition-time-func));
+  overflow: auto;
+  z-index: 500;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu__btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  right: 15px;
+  transition: fill var(--transition-duration)
+    cubic-bezier(var(--transition-time-func));
+
+  &:hover,
+  &:focus {
+    fill: var(--primary-accent-color);
+  }
+}
+
+.mobile-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-bottom: auto;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: calc(47 / 40);
+  letter-spacing: 0.02em;
+}
+
+.mobile-menu__link {
+  transition: color var(--transition-duration)
+    cubic-bezier(var(--transition-time-func));
+  &.current,
+  &:hover,
+  &:focus {
+    color: var(--primary-accent-color);
+  }
+}
+.mobile-menu__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 64px;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: calc(40 / 34);
+  letter-spacing: 0.02em;
+}
+
+.mobile-menu__contacts-link {
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  color: var(--secondary-color);
+
+  &.current {
+    font-size: 34px;
+    line-height: calc(40 / 34);
+    letter-spacing: 0.02em;
+    color: var(--primary-accent-color);
+  }
+}
+.mobile-menu__socials {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mobile-menu__social-item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-menu__social-link {
+  padding: 0 5px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  letter-spacing: 0.02em;
+  color: var(--primary-accent-color);
+}

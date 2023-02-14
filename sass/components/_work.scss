@@ -4,15 +4,13 @@
     |============================
   */
 .work {
+  // Desktop screen
   padding-top: 0;
-}
 
-.section-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  margin-bottom: 50px;
+  // Hidden for tablets and phones
+  @media screen and (max-width: 1199.98px) {
+    display: none;
+  }
 }
 
 .work__list {
