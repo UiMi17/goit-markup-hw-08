@@ -773,16 +773,9 @@ header {
 }
 
 /* Header contacts */
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 767.98px) {
   .contacts-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: auto;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.1428571429;
-    letter-spacing: 0.02em;
+    display: none;
   }
 }
 @media screen and (min-width: 768px) {
@@ -798,14 +791,21 @@ header {
     gap: 10px;
     margin-left: auto;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.1666666667;
     letter-spacing: 0.02em;
   }
 }
-@media screen and (max-width: 767.98px) {
+@media screen and (min-width: 1200px) {
   .contacts-list {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -841,8 +841,6 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-size: 12px;
-    line-height: 1.1666666667;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
