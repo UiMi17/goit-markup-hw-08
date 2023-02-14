@@ -4,19 +4,23 @@
     |============================
   */
 .features__list {
+  // Tablet screen
   @media screen and (min-width: 768px) {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  align-items: baseline;
-}
-
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: baseline;
+  }
 }
 .features__item {
   // Phone
   max-width: 450px;
+  
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 
   // Tablet
   @media screen and (min-width: 768px) {
@@ -48,7 +52,6 @@
   @media screen and (min-width: 1200px) {
     max-width: 270px;
   }
-
 }
 
 .features__list .features__title {

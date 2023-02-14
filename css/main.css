@@ -773,15 +773,17 @@ header {
 }
 
 /* Header contacts */
-.contacts-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+@media screen and (min-width: 1200px) {
+  .contacts-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    letter-spacing: 0.02em;
+  }
 }
 @media screen and (min-width: 768px) {
   .contacts-list {
@@ -813,24 +815,26 @@ header {
   }
 }
 
-.contacts-list .contacts-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 10px;
-  padding-top: 32px;
-  padding-bottom: 31px;
-  color: var(--secondary-color);
-  fill: currentColor;
-  -webkit-transition: color var(--transition-duration) cubic-bezier(var(--transition-time-func)), fill var(--transition-duration) cubic-bezier(var(--transition-time-func));
-  transition: color var(--transition-duration) cubic-bezier(var(--transition-time-func)), fill var(--transition-duration) cubic-bezier(var(--transition-time-func));
-}
-.contacts-list .contacts-link:hover, .contacts-list .contacts-link:focus {
-  color: var(--primary-accent-color);
-  fill: currentColor;
+@media screen and (min-width: 1200px) {
+  .contacts-list .contacts-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+    padding-top: 32px;
+    padding-bottom: 31px;
+    color: var(--secondary-color);
+    fill: currentColor;
+    -webkit-transition: color var(--transition-duration) cubic-bezier(var(--transition-time-func)), fill var(--transition-duration) cubic-bezier(var(--transition-time-func));
+    transition: color var(--transition-duration) cubic-bezier(var(--transition-time-func)), fill var(--transition-duration) cubic-bezier(var(--transition-time-func));
+  }
+  .contacts-list .contacts-link:hover, .contacts-list .contacts-link:focus {
+    color: var(--primary-accent-color);
+    fill: currentColor;
+  }
 }
 @media screen and (min-width: 768px) {
   .contacts-list .contacts-link {
@@ -845,6 +849,7 @@ header {
     gap: 10px;
     padding: 0;
     color: var(--secondary-color);
+    fill: currentColor;
   }
 }
 
@@ -877,7 +882,6 @@ header {
 */
 .hero-section {
   padding: 118px 0;
-  max-width: 480px;
   max-height: 400px;
   margin: 0 auto;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/mobile__hero-bg@x1.jpg);
@@ -1149,6 +1153,9 @@ header {
 .features__item {
   max-width: 450px;
 }
+.features__item:not(:last-child) {
+  margin-bottom: 30px;
+}
 @media screen and (min-width: 768px) {
   .features__item {
     max-width: 354px;
@@ -1287,10 +1294,19 @@ header {
 }
 
 .team__item {
-  max-width: 270px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+@media screen and (min-width: 768px) {
+  .team__item {
+    max-width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    max-width: 270px;
+  }
 }
 
 .team__content-wrapper {
@@ -1807,7 +1823,6 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 36px;
-  margin-bottom: auto;
   font-weight: 500;
   font-size: 40px;
   line-height: 1.175;
@@ -1831,7 +1846,6 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 32px;
-  margin-bottom: 64px;
   font-weight: 500;
   font-size: 34px;
   line-height: 1.1764705882;
@@ -1844,8 +1858,8 @@ header {
   color: var(--secondary-color);
 }
 .mobile-menu__contacts-link.current {
-  font-size: 34px;
-  line-height: 1.1764705882;
+  font-size: 27px;
+  line-height: 1.4814814815;
   letter-spacing: 0.02em;
   color: var(--primary-accent-color);
 }
